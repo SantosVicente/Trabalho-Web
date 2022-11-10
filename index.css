@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Noto+Sans+Wancho&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: 'Oxygen', sans-serif;
+    font-size: 18px;
+}
+
+html{
+    /*Granite*/
+    --Blue1: #3A7B99;
+    --Blue2: #70AFCE;
+    --Blue3: #A5DEF1;
+    --White1: #F7FBFA;
+    
+    /*Riot*/
+    --Red: #FA4753;
+    --Black: #17181C;
+    --White2: #E5E5E5;
+    --Cinza: #9BA5C9;
+}
+
+body{
+    background-color: #1E1B18;
+}
+
+.header{
+    background-image: linear-gradient(135deg, #61082a 0%, #AF053E 77%);
+    border-bottom: 1px solid black;
+}
+
+.introduction{
+    background-image: linear-gradient(135deg, #6d142d 0%, #AF053E 77%);
+    color: aliceblue;
+}
+
+.introduction .card_intro h1{
+    padding-top: 5rem;
+    font-size: 34px;
+    font-weight: 700;
+    font-family: 'Noto Sans Wancho';
+}
+
+.card_intro{
+    display: flex;
+    justify-content: center;
+}
+
+.container h2{
+    font-size: 25px;
+    padding-bottom: 35px;
+}
+
+
+.card_turma{
+    background-image: linear-gradient(35deg, #6d142d 0%, #AF053E 77%);
+}
+
+hr{
+    border-color: #1E1B18;
+}
+
+.card_turma h2{
+    padding-top: 60px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 40px;
+    display: flex;
+    font-size: 23px;
+    justify-content: center;
+}
+
+.logo{
+    padding-top: 20px;
+    padding-bottom: 5px;
+    display: flex;
+    justify-content: center;
+}
+
+.icon{
+    width: 150px;
+    height: 50px;
+}
+
+ul{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+li{
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+a{
+    text-decoration: none;
+    color: aliceblue;
+    font-weight: 600;
+}
+
+.content a{
+    text-decoration: none;
+    color: aliceblue;
+    font-weight: 400;
+}
+
+.turmas{
+    background-image: linear-gradient(135deg, #6d142d 0%, #AF053E 77%);
+}
+
+.title{
+    padding-bottom: 0.9rem;
+    display: flex;
+    justify-content: center;
+}
+
+.title h1{
+    font-size: 1.3rem;
+}
+
+.card{
+    background-image: linear-gradient(135deg, 6d142d 0%, #D8315B 77%);
+    padding-top: 1.9rem;
+    padding-left: 0.9rem;
+    padding-bottom: 1.9rem;
+    padding-right: 0.9rem;
+    color: aliceblue;
+    box-shadow:
+        0px 0px 4.3px rgba(0, 0, 0, 0.062),
+        0px 0px 8px rgba(0, 0, 0, 0.089),
+        0px 0px 12.2px rgba(0, 0, 0, 0.11),
+        0px 0px 17.7px rgba(0, 0, 0, 0.131),
+        0px 0px 25.8px rgba(0, 0, 0, 0.158),
+        0px 0px 45px rgba(154, 154, 154, 0.22);
+    border-radius: 4px;
+    margin-bottom: 30px;
+}
+
+
+.botão{
+    display: flex;
+    justify-content: center;
+    padding-top: 0.5rem;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 5rem;
+    padding-bottom: 18vh;
+}
+
+.container .group{
+    margin-top: 0.3rem;
+}
+
+.btn{
+    margin-top: 10px;
+    display: flex;
+    padding: 0.3563740rem;
+    font-size: 0.8rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.active{
+    background-color: #1E1B18;
+    display: flex;
+    justify-content: center;
+    color: aliceblue;
+    padding: 2rem;
+}
+
+
+td, th, tr{
+    border-collapse: collapse;
+    border: 2px solid rgb(89, 89, 89);
+    padding: 10px;
+}
+
+table{
+    border-collapse: collapse;
+}
+
+input, button, select{
+    background-color: #24211f;
+    border: .5px solid aliceblue;
+    border-radius: 4px;
+    color: aliceblue;
+}

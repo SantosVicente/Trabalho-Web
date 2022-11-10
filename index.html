@@ -1,0 +1,95 @@
+<!--
+    
+    ATENÇÃO!!
+
+    O QUE DEVE SER ARRUMADO:
+    --paleta de cores
+    --trocar os nomes das tags
+    --estilizar
+
+
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="index.css" media="all" type="text/css">
+    <link rel="icon" href="" />
+    <title>Hogwarts</title>
+</head>
+
+<body>
+    <div class="header">
+        <div class="logo">
+            <!--Colocar a logo aqui-->
+            <a href="#"><img src="" class="icon"></a>
+        </div>
+    </div>
+
+    <div class="introduction">
+
+        <div class="container">
+
+            <div class="card">
+                <div class="title">
+                    <h1>Cadastro</h1>
+                </div>
+                <div class="group">
+                    <form>
+                        <div class="group">
+                            <!--O atributo FOR aponta para o id do input-->
+                            <label for="nome">Nome:</label>
+                            <input type="text" class="" id="nome">
+                        </div>
+                        <div class="group">
+                            <label for="turma">Turma:</label>
+                            <select id="turma">
+                                <option value="">--Escolha uma turma--</option>
+                                <option value="Turma 1">Turma 1</option>
+                                <option value="Turma 2">Turma 2</option>
+                                <option value="Turma 3">Turma 3</option>
+                                <option value="Turma 4">Turma 4</option>
+                            </select>
+                        </div>
+                        <div class="group">
+                            <label for="nota">Nota:</label>
+                            <input type="text" id="nota">
+                        </div>
+                        <div class="group">
+                            <label for="matricula">Matricula:</label>
+                            <input type="text" id="matricula">
+                        </div>
+                        <div class="botão">
+                            <button type="button" class="btn" onclick="matricular()">Matricular</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="card_turma">
+            <h2>Escolha uma turma para ver os alunos cadastrados</h2>
+        </div>
+    </div>
+
+    <div class="turmas">
+        <ul>
+            <li><a href="#" onclick="listar(this.innerHTML)">Turma 1</a></li>
+            <li><a href="#" onclick="listar(this.innerHTML)">Turma 2</a></li>
+            <li><a href="#" onclick="listar(this.innerHTML)">Turma 3</a></li>
+            <li><a href="#" onclick="listar(this.innerHTML)">Turma 4</a></li>
+        </ul>
+    </div>
+
+    <div class="content">
+        <div id="listaralunos" class="active"></div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
