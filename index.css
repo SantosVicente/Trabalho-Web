@@ -3,7 +3,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
     font-family: 'Oxygen', sans-serif;
     font-size: 18px;
 }
@@ -14,12 +13,13 @@ html{
     --Blue2: #70AFCE;
     --Blue3: #A5DEF1;
     --White1: #F7FBFA;
-    
+
     /*Riot*/
     --Red: #FA4753;
-    --Black: #17181C;
+    --Black1: #17181C;
+    --Black2: #161926;
     --White2: #E5E5E5;
-    --Cinza: #9BA5C9;
+    --Cinza: #26262b;
 }
 
 body{
@@ -27,13 +27,14 @@ body{
 }
 
 .header{
-    background-image: linear-gradient(135deg, #61082a 0%, #AF053E 77%);
+    background-color: var(--Red); 
     border-bottom: 1px solid black;
 }
 
 .introduction{
-    background-image: linear-gradient(135deg, #6d142d 0%, #AF053E 77%);
+    background-color: var(--Black2);
     color: aliceblue;
+    min-height: 90vh;
 }
 
 .introduction .card_intro h1{
@@ -53,13 +54,9 @@ body{
     padding-bottom: 35px;
 }
 
-
 .card_turma{
     background-image: linear-gradient(35deg, #6d142d 0%, #AF053E 77%);
-}
-
-hr{
-    border-color: #1E1B18;
+    color: var(--White1);
 }
 
 .card_turma h2{
@@ -80,8 +77,7 @@ hr{
 }
 
 .icon{
-    width: 150px;
-    height: 50px;
+    width: 100px;
 }
 
 ul{
@@ -114,7 +110,7 @@ a{
 }
 
 .title{
-    padding-bottom: 0.9rem;
+    padding-bottom: 0.3rem;
     display: flex;
     justify-content: center;
 }
@@ -124,21 +120,26 @@ a{
 }
 
 .card{
-    background-image: linear-gradient(135deg, 6d142d 0%, #D8315B 77%);
+    /*background-image: linear-gradient(135deg, 6d142d 0%, #D8315B 77%);
+    */
+    border: 1px solid var(--White1);
     padding-top: 1.9rem;
     padding-left: 0.9rem;
     padding-bottom: 1.9rem;
     padding-right: 0.9rem;
     color: aliceblue;
     box-shadow:
-        0px 0px 4.3px rgba(0, 0, 0, 0.062),
-        0px 0px 8px rgba(0, 0, 0, 0.089),
-        0px 0px 12.2px rgba(0, 0, 0, 0.11),
-        0px 0px 17.7px rgba(0, 0, 0, 0.131),
-        0px 0px 25.8px rgba(0, 0, 0, 0.158),
-        0px 0px 45px rgba(154, 154, 154, 0.22);
+    0px 0px 4.3px rgba(0, 0, 0, 0.062),
+    0px 0px 8px rgba(0, 0, 0, 0.089),
+    0px 0px 12.2px rgba(0, 0, 0, 0.11),
+    0px 0px 17.7px rgba(0, 0, 0, 0.131),
+    0px 0px 25.8px rgba(0, 0, 0, 0.158),
+    0px 0px 45px rgba(154, 154, 154, 0.22);
     border-radius: 4px;
     margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    width: 18rem;
 }
 
 
@@ -156,21 +157,41 @@ a{
     padding-bottom: 18vh;
 }
 
-.container .group{
+.container .group label{
     margin-top: 0.3rem;
+}
+
+.container .group{
+    display: flex;
+    flex-direction: column;
+    margin: 0px 20px;
 }
 
 .btn{
     margin-top: 10px;
+    background-color: var(--Black2);
+    outline: none;
+    color: aliceblue;
     display: flex;
-    padding: 0.3563740rem;
+    padding-top: 0.6rem;
+    padding-bottom: 0.6rem;
+    padding-right: 4rem;
+    padding-left: 4rem;
     font-size: 0.8rem;
     font-weight: 700;
+    border: 1px solid var(--White1);
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.btn:hover{
+    background-color: var(--White1);
+    color: var(--Black2);
     cursor: pointer;
 }
 
 .active{
-    background-color: #1E1B18;
+    background-color: var(--Black2);
     display: flex;
     justify-content: center;
     color: aliceblue;
@@ -188,9 +209,50 @@ table{
     border-collapse: collapse;
 }
 
-input, button, select{
-    background-color: #24211f;
-    border: .5px solid aliceblue;
-    border-radius: 4px;
+input::placeholder{
     color: aliceblue;
+}
+
+input, select{
+    margin-top: 2rem;
+    outline: none;
+    border: none;
+    background-color: var(--Black2);
+    color: aliceblue;
+}
+
+.group{
+    position: relative;
+}
+
+select{
+    -webkit-appearance: none;
+    cursor: pointer;
+}
+
+.group .underline::before{
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    bottom: -5px;
+    left: 0px;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.group .underline::after{
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    bottom: -5px;
+    left: 0px;
+    background-color: var(--White1);
+    transform: scaleX(0);
+    transition: all .3s ease-in-out;
+    transform-origin: left;
+}
+
+.group input:focus ~ .underline::after{
+    transform: scaleX(1);
 }
