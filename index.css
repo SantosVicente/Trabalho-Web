@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Noto+Sans+Wancho&display=swap');
-*{
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -7,7 +8,7 @@
     font-size: 18px;
 }
 
-html{
+html {
     /*Granite*/
     --Blue1: #3A7B99;
     --Blue2: #70AFCE;
@@ -17,49 +18,61 @@ html{
     /*Riot*/
     --Red: #FA4753;
     --Black1: #17181C;
-    --Black2: #161926;
+    --Black2: #161127;
     --White2: #E5E5E5;
     --Cinza: #26262b;
 }
 
-body{
+body {
     background-color: #1E1B18;
 }
 
-.header{
-    background-color: var(--Red); 
+body::-webkit-scrollbar-thumb {
+    background-color: blue;
+    border-radius: 20px;
+    border: 3px solid orange;
+}
+
+.header {
+    background-color: var(--Red);
     border-bottom: 1px solid black;
 }
 
-.introduction{
-    background-color: var(--Black2);
+.introduction {
+    background-image: url(mountains-3270710.png);
+    background-size: cover;
+    background-repeat: no-repeat;
     color: aliceblue;
     min-height: 90vh;
 }
 
-.introduction .card_intro h1{
+.introduction .card_intro h1 {
     padding-top: 5rem;
     font-size: 34px;
     font-weight: 700;
     font-family: 'Noto Sans Wancho';
 }
 
-.card_intro{
+.card_intro {
     display: flex;
     justify-content: center;
 }
 
-.container h2{
-    font-size: 25px;
-    padding-bottom: 35px;
+.container{
+    height: 90vh;
+    background: rgba(0, 0, 0, 0.29);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
 }
 
-.card_turma{
-    background-image: linear-gradient(35deg, #6d142d 0%, #AF053E 77%);
+.card_turma {
+    background-color: var(--Black2);
     color: var(--White1);
 }
 
-.card_turma h2{
+.card_turma h2 {
     padding-top: 60px;
     padding-left: 40px;
     padding-right: 40px;
@@ -69,72 +82,74 @@ body{
     justify-content: center;
 }
 
-.logo{
+.logo {
     padding-top: 20px;
     padding-bottom: 5px;
     display: flex;
     justify-content: center;
 }
 
-.icon{
+.icon {
     width: 100px;
 }
 
-ul{
+ul {
     display: flex;
     justify-content: center;
     list-style: none;
 }
 
-li{
+li {
     padding-left: 16px;
     padding-right: 16px;
     padding-top: 20px;
     padding-bottom: 20px;
 }
 
-a{
+a {
     text-decoration: none;
     color: aliceblue;
     font-weight: 600;
 }
 
-.content a{
+.content a {
     text-decoration: none;
     color: aliceblue;
     font-weight: 400;
 }
 
-.turmas{
-    background-image: linear-gradient(135deg, #6d142d 0%, #AF053E 77%);
+.turmas {
+ background-color: var(--Black2);   
 }
 
-.title{
+.title {
     padding-bottom: 0.3rem;
     display: flex;
     justify-content: center;
 }
 
-.title h1{
+.title h1 {
     font-size: 1.3rem;
 }
 
-.card{
+.card {
     /*background-image: linear-gradient(135deg, 6d142d 0%, #D8315B 77%);
     */
+    background-color: var(--Black2);
     border: 1px solid var(--White1);
+    margin-top: 2.5rem;
     padding-top: 1.9rem;
     padding-left: 0.9rem;
     padding-bottom: 1.9rem;
     padding-right: 0.9rem;
     color: aliceblue;
     box-shadow:
-    0px 0px 4.3px rgba(0, 0, 0, 0.062),
-    0px 0px 8px rgba(0, 0, 0, 0.089),
-    0px 0px 12.2px rgba(0, 0, 0, 0.11),
-    0px 0px 17.7px rgba(0, 0, 0, 0.131),
-    0px 0px 25.8px rgba(0, 0, 0, 0.158),
-    0px 0px 45px rgba(154, 154, 154, 0.22);
+        0px 0px 4.3px rgba(0, 0, 0, 0.062),
+        0px 0px 8px rgba(0, 0, 0, 0.089),
+        0px 0px 12.2px rgba(0, 0, 0, 0.11),
+        0px 0px 17.7px rgba(0, 0, 0, 0.131),
+        0px 0px 25.8px rgba(0, 0, 0, 0.158),
+        0px 0px 45px rgba(154, 154, 154, 0.22);
     border-radius: 4px;
     margin-bottom: 30px;
     display: flex;
@@ -143,13 +158,13 @@ a{
 }
 
 
-.botão{
+.botão {
     display: flex;
     justify-content: center;
     padding-top: 0.5rem;
 }
 
-.container{
+.container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -157,17 +172,17 @@ a{
     padding-bottom: 18vh;
 }
 
-.container .group label{
+.container .group label {
     margin-top: 0.3rem;
 }
 
-.container .group{
+.container .group {
     display: flex;
     flex-direction: column;
     margin: 0px 20px;
 }
 
-.btn{
+.btn {
     margin-top: 10px;
     background-color: var(--Black2);
     outline: none;
@@ -184,13 +199,13 @@ a{
     transition: all 0.3s ease;
 }
 
-.btn:hover{
+.btn:hover {
     background-color: var(--White1);
     color: var(--Black2);
     cursor: pointer;
 }
 
-.active{
+.active {
     background-color: var(--Black2);
     display: flex;
     justify-content: center;
@@ -199,21 +214,24 @@ a{
 }
 
 
-td, th, tr{
+td,
+th,
+tr {
     border-collapse: collapse;
     border: 2px solid rgb(89, 89, 89);
     padding: 10px;
 }
 
-table{
+table {
     border-collapse: collapse;
 }
 
-input::placeholder{
+input::placeholder {
     color: aliceblue;
 }
 
-input, select{
+input,
+select {
     margin-top: 2rem;
     outline: none;
     border: none;
@@ -221,16 +239,16 @@ input, select{
     color: aliceblue;
 }
 
-.group{
+.group {
     position: relative;
 }
 
-select{
+select {
     -webkit-appearance: none;
     cursor: pointer;
 }
 
-.group .underline::before{
+.group .underline::before {
     content: '';
     position: absolute;
     height: 1px;
@@ -240,7 +258,7 @@ select{
     background-color: rgba(255, 255, 255, 0.5);
 }
 
-.group .underline::after{
+.group .underline::after {
     content: '';
     position: absolute;
     height: 1px;
@@ -253,6 +271,6 @@ select{
     transform-origin: left;
 }
 
-.group input:focus ~ .underline::after{
+.group input:focus~.underline::after {
     transform: scaleX(1);
 }

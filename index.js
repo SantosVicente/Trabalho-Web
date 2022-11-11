@@ -37,6 +37,11 @@ function listar(turma) {
 
 function mudarItem(i) {
     var newitem = window.prompt("Digite uma nova turma para o aluno.");
+    
+    if(newitem != "Turma 1" && newitem != "Turma 2" && newitem != "Turma 3" && newitem != "Turma 4") {
+        newitem = "Outro";
+    }
+    
     alunos[i].turma = newitem;
     listar(alunos[i].turma);
 }
